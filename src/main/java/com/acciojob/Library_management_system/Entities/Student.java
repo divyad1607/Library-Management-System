@@ -1,68 +1,31 @@
 package com.acciojob.Library_management_system.Entities;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jdk.jfr.DataAmount;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@Table(name = "student_info")
+@Getter
+@Setter
+@NoArgsConstructor //This is like a default constructor
+@AllArgsConstructor //This is like a constructor having all the arguments
 
-@Table
 public class Student {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int rollId;
 
-    private int studentId;
+    private String Name;
 
-    private String studentName;
+    private String branch;
 
-
-    private Integer age;
-
-
-    private String course;
-
-    public String getEmailId() {
-        return emailId;
-    }
-
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
-    }
+    private double cgpa;
 
     private String emailId;
 
-
-    public int getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
-    }
-
-    public String getStudentName() {
-        return studentName;
-    }
-
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public String getCourse() {
-        return course;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
-    }
 }
