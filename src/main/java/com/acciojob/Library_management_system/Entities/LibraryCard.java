@@ -19,11 +19,16 @@ public class LibraryCard {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cardNo;
 
+    @Enumerated(value = EnumType.STRING)
     private CardStatus cardStatus;
 
-    private int noOfBooksIsuued;
+    private int noOfBooksIssued;
 
     private Date validity;
 
+
+    @JoinColumn
+    @OneToOne
+    private Student student;
 
 }

@@ -20,12 +20,15 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int rollId;
 
+    @Column(nullable = false)
     private String Name;
 
     private String branch;
 
+    @Column(nullable = false)
     private double cgpa;
 
+    @Column(unique = true )
     private String emailId;
 
 }
