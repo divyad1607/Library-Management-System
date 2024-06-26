@@ -44,9 +44,7 @@ public class CardService {
         Student student = studentRepository.findById(studentId).get();
         libraryCard.setCardStatus(CardStatus.ISSUED);
         libraryCard.setStudent(student);
-
         cardRepository.save(libraryCard);
-
         return "The card and statement has been associated";
     }
 

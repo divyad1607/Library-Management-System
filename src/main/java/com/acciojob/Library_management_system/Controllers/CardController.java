@@ -17,7 +17,7 @@ public class CardController {
     @PostMapping("/generateCard")
     public ResponseEntity addCard(){
       String result = cardService.generateCard();
-      return new ResponseEntity(result,HttpStatus.OK);
+        return new ResponseEntity(result, HttpStatus.OK);
     }
 
     @PutMapping("/associateCardAndStudent")
